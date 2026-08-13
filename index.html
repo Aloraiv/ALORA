@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ALORA DISCOVERY SET — ексклюзивна колекція з чотирьох витончених ароматів.">
+  <meta name="theme-color" content="#080808">
+  <title>ALORA DISCOVERY SET — Exclusive Collection</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #080808;
+      --black-soft: #101010;
+      --gold: #c5a059;
+      --gold-light: #d4af37;
+      --gold-muted: #9f824a;
+      --cream: #f3eee5;
+      --text: #e9e4da;
+      --text-muted: #aaa39a;
+      --border: rgba(197, 160, 89, 0.30);
+      --border-soft: rgba(255, 255, 255, 0.10);
+      --max-width: 1180px;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Plus Jakarta Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max-width));
+      margin-inline: auto;
+    }
+
+    .top-bar {
+      border-bottom: 1px solid var(--border-soft);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      padding: 10px 16px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .header {
+      padding: 44px 0 34px;
+      text-align: center;
+    }
+
+    .brand-mark {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      line-height: 0.8;
+      margin-bottom: 18px;
+    }
+
+    .header h1 {
+      color: var(--cream);
+      font-family: var(--serif);
+      font-size: clamp(42px, 11vw, 76px);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+    }
+
+    .header-subtitle {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 21px;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      margin-top: 16px;
+    }
+
+    .gold-line {
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      height: 1px;
+      margin: 28px auto 0;
+      max-width: 220px;
+    }
+
+    .hero {
+      padding: 18px 0 72px;
+    }
+
+    .hero-grid {
+      align-items: center;
+      display: grid;
+      gap: 42px;
+    }
+
+    .hero-copy {
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .hero h2,
+    .section-title {
+      color: var(--cream);
+      font-family: var(--serif);
+      font-size: clamp(40px, 10vw, 64px);
+      font-weight: 500;
+      line-height: 0.98;
+    }
+
+    .hero-description {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin: 24px auto 0;
+      max-width: 570px;
+    }
+
+    .hero-image-wrap {
+      background: #0d0d0d;
+      border: 1px solid var(--border);
+      padding: 10px;
+      position: relative;
+    }
+
+    .hero-image-wrap::before {
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      content: "";
+      inset: 5px;
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .hero-image {
+      aspect-ratio: 4 / 3;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .specifications {
+      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .spec {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 28px 18px;
+      text-align: center;
+    }
+
+    .spec:last-child {
+      border-bottom: 0;
+    }
+
+    .spec-value {
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .spec-label {
+      color: var(--text-muted);
+      font-size: 10px;
+      letter-spacing: 0.13em;
+      margin-top: 9px;
+      text-transform: uppercase;
+    }
+
+    .fragrances {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+      text-align: center;
+    }
+
+    .section-heading .gold-line {
+      margin-top: 20px;
+    }
+
+    .fragrance-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+    }
+
+    .fragrance-card {
+      background: linear-gradient(145deg, #111111, #0b0b0b);
+      border: 1px solid var(--border-soft);
+      min-height: 235px;
+      padding: 30px 25px;
+      position: relative;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .fragrance-card:hover {
+      border-color: var(--border);
+      transform: translateY(-3px);
+    }
+
+    .fragrance-number {
+      color: var(--gold-muted);
+      font-family: var(--serif);
+      font-size: 15px;
+      left: 25px;
+      position: absolute;
+      top: 21px;
+    }
+
+    .fragrance-card h3 {
+      color: var(--cream);
+      font-family: var(--serif);
+      font-size: 35px;
+      font-weight: 500;
+      margin-top: 16px;
+    }
+
+    .fragrance-meta {
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .fragrance-notes {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    .order-section {
+      padding: 0 0 82px;
+    }
+
+    .order-box {
+      background: #0c0c0c;
+      border: 1px solid var(--border);
+      padding: 34px 22px;
+      position: relative;
+    }
+
+    .order-box::after {
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      content: "";
+      inset: 6px;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .order-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .order-heading {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .order-heading p {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin: 15px auto 0;
+      max-width: 500px;
+    }
+
+    .order-form {
+      display: grid;
+      gap: 15px;
+      margin: 0 auto;
+      max-width: 650px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field label {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field textarea {
+      background: #080808;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 0;
+      color: var(--cream);
+      outline: none;
+      padding: 14px 15px;
+      transition: border-color 0.2s ease;
+      width: 100%;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .field textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      border: 0;
+      color: #090909;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      margin-top: 8px;
+      min-height: 54px;
+      padding: 14px 20px;
+      text-transform: uppercase;
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+
+    .submit-button:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    .form-note {
+      color: #77736d;
+      font-size: 10px;
+      line-height: 1.6;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 55px 0 32px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 30px;
+      letter-spacing: 0.12em;
+    }
+
+    .qr-wrap {
+      margin: 25px auto 20px;
+      width: 135px;
+    }
+
+    .qr-wrap img {
+      background: #ffffff;
+      padding: 8px;
+      width: 100%;
+    }
+
+    .instagram-link {
+      color: var(--cream);
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      margin-bottom: 26px;
+    }
+
+    .contact-list {
+      border-top: 1px solid var(--border-soft);
+      display: grid;
+      gap: 12px;
+      margin: 0 auto;
+      max-width: 500px;
+      padding-top: 22px;
+    }
+
+    .contact-list a {
+      color: var(--text-muted);
+      font-size: 12px;
+      transition: color 0.2s ease;
+    }
+
+    .contact-list a:hover,
+    .instagram-link:hover {
+      color: var(--gold);
+    }
+
+    .copyright {
+      color: #5f5c57;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      margin-top: 35px;
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 650px) {
+      .container {
+        width: min(100% - 52px, var(--max-width));
+      }
+
+      .hero {
+        padding-top: 35px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 0.85fr 1.15fr;
+      }
+
+      .hero-copy {
+        text-align: left;
+      }
+
+      .hero-description {
+        margin-left: 0;
+      }
+
+      .hero-copy .gold-line {
+        margin-left: 0;
+      }
+
+      .specifications {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .spec {
+        border-bottom: 0;
+        border-right: 1px solid var(--border-soft);
+      }
+
+      .spec:last-child {
+        border-right: 0;
+      }
+
+      .fragrance-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .order-box {
+        padding: 55px 40px;
+      }
+
+      .contact-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .top-bar {
+        font-size: 10px;
+        padding: 11px 20px;
+      }
+
+      .header {
+        padding: 70px 0 55px;
+      }
+
+      .hero {
+        padding-bottom: 100px;
+      }
+
+      .hero-grid {
+        gap: 75px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .fragrances {
+        padding: 105px 0;
+      }
+
+      .fragrance-grid {
+        gap: 18px;
+      }
+
+      .fragrance-card {
+        min-height: 270px;
+        padding: 38px 35px;
+      }
+
+      .fragrance-number {
+        left: 35px;
+        top: 28px;
+      }
+
+      .fragrance-card h3 {
+        font-size: 42px;
+        margin-top: 20px;
+      }
+
+      .fragrance-notes {
+        font-size: 14px;
+        max-width: 410px;
+      }
+
+      .order-section {
+        padding-bottom: 110px;
+      }
+
+      .footer {
+        padding-top: 70px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    ALORA Haute Parfumerie • Limited Discovery Edition
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand-mark" aria-hidden="true">A<br>L·R</div>
+      <h1>ALORA DISCOVERY SET</h1>
+      <div class="header-subtitle">Exclusive Collection</div>
+      <div class="gold-line"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">ALORA • Discovery Collection</div>
+            <h2>Discovery Set</h2>
+            <div class="gold-line"></div>
+            <p class="hero-description">
+              Ексклюзивна колекція з 4 витончених ароматів. Відкрийте для себе власне парфумерне втілення шляхетності та розкоші.
+            </p>
+          </div>
+
+          <div class="hero-image-wrap">
+            <img
+              class="hero-image"
+              src="alora_package.png.jpg"
+              alt="ALORA Discovery Set"
+              loading="eager"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specifications" aria-label="Характеристики">
+      <div class="spec">
+        <div class="spec-value">4 x 3 ML</div>
+        <div class="spec-label">Формат мініатюр</div>
+      </div>
+      <div class="spec">
+        <div class="spec-value">100% Ексклюзив</div>
+        <div class="spec-label">Селективні композиції</div>
+      </div>
+      <div class="spec">
+        <div class="spec-value">Haute Qualité</div>
+        <div class="spec-label">Висока стійкість</div>
+      </div>
+    </section>
+
+    <section class="fragrances">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">The Collection</div>
+          <h2 class="section-title">Four Expressions</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="fragrance-grid">
+          <article class="fragrance-card">
+            <div class="fragrance-number">01</div>
+            <h3>Delina</h3>
+            <div class="fragrance-meta">3 ML • Extrait de Parfum</div>
+            <p class="fragrance-notes">
+              Турецька троянда, півонія, мускус, кашмеран.
+            </p>
+          </article>
+
+          <article class="fragrance-card">
+            <div class="fragrance-number">02</div>
+            <h3>Devotion</h3>
+            <div class="fragrance-meta">3 ML • Extrait de Parfum</div>
+            <p class="fragrance-notes">
+              Зацукровані цитруси, флердоранж, ваніль.
+            </p>
+          </article>
+
+          <article class="fragrance-card">
+            <div class="fragrance-number">03</div>
+            <h3>Goddess</h3>
+            <div class="fragrance-meta">3 ML • Extrait de Parfum</div>
+            <p class="fragrance-notes">
+              Три види ванілі, гірська лаванда.
+            </p>
+          </article>
+
+          <article class="fragrance-card">
+            <div class="fragrance-number">04</div>
+            <h3>Light Blue Summer</h3>
+            <div class="fragrance-meta">3 ML • Extrait de Parfum</div>
+            <p class="fragrance-notes">
+              Сицилійський лимон, соковите яблуко, кедр.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="container">
+        <div class="order-box">
+          <div class="order-content">
+            <div class="order-heading">
+              <div class="eyebrow">Private Order</div>
+              <h2 class="section-title">Придбати набір</h2>
+              <div class="gold-line"></div>
+              <p>
+                Залиште ваші дані, і ми зв'яжемося з вами для підтвердження замовлення.
+              </p>
+            </div>
+
+            <form
+              class="order-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="Нове замовлення ALORA DISCOVERY SET">
+              <input type="hidden" name="from_name" value="ALORA DISCOVERY SET">
+              <input type="hidden" name="redirect" value="false">
+
+              <div class="field">
+                <label for="name">Ім'я</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Ваше ім'я" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+380" required>
+              </div>
+
+              <div class="field">
+                <label for="city">Місто та № Нової Пошти</label>
+                <input id="city" name="city_and_post" type="text" placeholder="Місто, відділення / поштомат" required>
+              </div>
+
+              <div class="field">
+                <label for="comment">Коментар</label>
+                <textarea id="comment" name="comment" placeholder="Ваш коментар до замовлення"></textarea>
+              </div>
+
+              <button class="submit-button" type="submit">
+                Придбати Discovery Set
+              </button>
+
+              <div class="form-note">
+                Натискаючи кнопку, ви надсилаєте дані для обробки замовлення.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">ALORA</div>
+
+      <div class="qr-wrap">
+        <img
+          src="instagram_qr.png.jpg"
+          alt="QR-код Instagram ALORA"
+          loading="lazy"
+        >
+      </div>
+
+      <a
+        class="instagram-link"
+        href="https://instagram.com/ALORA_IV"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @ALORA_IV
+      </a>
+
+      <div class="contact-list">
+        <a
+          href="https://t.me/ALORA_IV"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Telegram
+        </a>
+
+        <a href="tel:+380688628694">
+          +380 68 862 86 94
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2026 ALORA Haute Parfumerie
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
